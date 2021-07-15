@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body {
+    background-image: linear-gradient(120deg, #5db1e2, #7f0ac4);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 1.5rem;
+}
+
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, 
+form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+    border-radius: 2rem;
+} 
+
+form button {
+    color: #5db1e2; 
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 0.5rem;
+}
+
+form button:hover {
+    color: white;
+    background: #5db1e2;
+}
+
+.fa-plus-circle {
+    margin-top: 0.3rem;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 2rem;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.trash-btn, 
+.complete-btn {
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.complete-btn {
+    background: #d2b1e6;
+}
+
+.trash-btn {
+    border-top-right-radius: 1.75rem;
+    border-bottom-right-radius: 1.75rem;
+    background: #5db1e2;
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+/* Making the icons unclickable */
+.fa-trash, 
+.fa-check-circle {
+    pointer-events: none;
+}
+
+/* Line through text after completed btn is pressed */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+/* Animation of items when trash button is clicked */
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+/* Select button */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+/* Select div */
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Select button */
+select {
+    color: #5db1e2; 
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+/* Select div arrow styling */
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #5db1e2;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select::hover::after {
+    background: white;
+    color:#ff6f47;
+}
